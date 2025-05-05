@@ -1,0 +1,337 @@
+{
+  "routes": [
+    {
+      "origin": "DEL",
+      "destination": "BOM",
+      "distance_km": 1290,
+      "direct_flight": {
+        "economy": {
+          "price": 120,
+          "cost_per_km": 0.093,
+          "duration_hours": 2.0
+        },
+        "premium_economy": {
+          "price": 180,
+          "cost_per_km": 0.140,
+          "duration_hours": 2.0
+        },
+        "business": {
+          "price": 350,
+          "cost_per_km": 0.271,
+          "duration_hours": 2.0
+        },
+        "first": {
+          "price": 600,
+          "cost_per_km": 0.465,
+          "duration_hours": 2.0
+        }
+      },
+      "layover_options": [
+        {
+          "via": "JAI",
+          "economy": {
+            "price": 110,
+            "cost_per_km": 0.085,
+            "duration_hours": 3.5,
+            "layover_hours": 1.0
+          },
+          "premium_economy": {
+            "price": 160,
+            "cost_per_km": 0.124,
+            "duration_hours": 3.5,
+            "layover_hours": 1.0
+          },
+          "business": {
+            "price": 320,
+            "cost_per_km": 0.248,
+            "duration_hours": 3.5,
+            "layover_hours": 1.0
+          },
+          "first": {
+            "price": 550,
+            "cost_per_km": 0.426,
+            "duration_hours": 3.5,
+            "layover_hours": 1.0
+          }
+        },
+        {
+          "via": "AMD",
+          "economy": {
+            "price": 105,
+            "cost_per_km": 0.081,
+            "duration_hours": 4.0,
+            "layover_hours": 1.5
+          },
+          "premium_economy": {
+            "price": 155,
+            "cost_per_km": 0.120,
+            "duration_hours": 4.0,
+            "layover_hours": 1.5
+          },
+          "business": {
+            "price": 310,
+            "cost_per_km": 0.240,
+            "duration_hours": 4.0,
+            "layover_hours": 1.5
+          },
+          "first": {
+            "price": 530,
+            "cost_per_km": 0.411,
+            "duration_hours": 4.0,
+            "layover_hours": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "origin": "DEL",
+      "destination": "BLR",
+      "distance_km": 1740,
+      "direct_flight": {
+        "economy": {
+          "price": 150,
+          "cost_per_km": 0.086,
+          "duration_hours": 2.5
+        },
+        "premium_economy": {
+          "price": 220,
+          "cost_per_km": 0.126,
+          "duration_hours": 2.5
+        },
+        "business": {
+          "price": 420,
+          "cost_per_km": 0.241,
+          "duration_hours": 2.5
+        },
+        "first": {
+          "price": 700,
+          "cost_per_km": 0.402,
+          "duration_hours": 2.5
+        }
+      },
+      "layover_options": [
+        {
+          "via": "BOM",
+          "economy": {
+            "price": 135,
+            "cost_per_km": 0.078,
+            "duration_hours": 4.5,
+            "layover_hours": 1.0
+          },
+          "premium_economy": {
+            "price": 200,
+            "cost_per_km": 0.115,
+            "duration_hours": 4.5,
+            "layover_hours": 1.0
+          },
+          "business": {
+            "price": 380,
+            "cost_per_km": 0.218,
+            "duration_hours": 4.5,
+            "layover_hours": 1.0
+          },
+          "first": {
+            "price": 650,
+            "cost_per_km": 0.374,
+            "duration_hours": 4.5,
+            "layover_hours": 1.0
+          }
+        },
+        {
+          "via": "HYD",
+          "economy": {
+            "price": 140,
+            "cost_per_km": 0.080,
+            "duration_hours": 4.0,
+            "layover_hours": 1.2
+          },
+          "premium_economy": {
+            "price": 210,
+            "cost_per_km": 0.121,
+            "duration_hours": 4.0,
+            "layover_hours": 1.2
+          },
+          "business": {
+            "price": 390,
+            "cost_per_km": 0.224,
+            "duration_hours": 4.0,
+            "layover_hours": 1.2
+          },
+          "first": {
+            "price": 670,
+            "cost_per_km": 0.385,
+            "duration_hours": 4.0,
+            "layover_hours": 1.2
+          }
+        }
+      ]
+    },
+    {
+      "origin": "BOM",
+      "destination": "CCU",
+      "distance_km": 1670,
+      "direct_flight": {
+        "economy": {
+          "price": 160,
+          "cost_per_km": 0.096,
+          "duration_hours": 2.8
+        },
+        "premium_economy": {
+          "price": 240,
+          "cost_per_km": 0.144,
+          "duration_hours": 2.8
+        },
+        "business": {
+          "price": 450,
+          "cost_per_km": 0.269,
+          "duration_hours": 2.8
+        },
+        "first": {
+          "price": 750,
+          "cost_per_km": 0.449,
+          "duration_hours": 2.8
+        }
+      },
+      "layover_options": [
+        {
+          "via": "DEL",
+          "economy": {
+            "price": 145,
+            "cost_per_km": 0.087,
+            "duration_hours": 5.0,
+            "layover_hours": 1.2
+          },
+          "premium_economy": {
+            "price": 220,
+            "cost_per_km": 0.132,
+            "duration_hours": 5.0,
+            "layover_hours": 1.2
+          },
+          "business": {
+            "price": 410,
+            "cost_per_km": 0.246,
+            "duration_hours": 5.0,
+            "layover_hours": 1.2
+          },
+          "first": {
+            "price": 690,
+            "cost_per_km": 0.413,
+            "duration_hours": 5.0,
+            "layover_hours": 1.2
+          }
+        }
+      ]
+    },
+    {
+      "origin": "BLR",
+      "destination": "MAA",
+      "distance_km": 290,
+      "direct_flight": {
+        "economy": {
+          "price": 60,
+          "cost_per_km": 0.207,
+          "duration_hours": 1.0
+        },
+        "premium_economy": {
+          "price": 90,
+          "cost_per_km": 0.310,
+          "duration_hours": 1.0
+        },
+        "business": {
+          "price": 180,
+          "cost_per_km": 0.621,
+          "duration_hours": 1.0
+        },
+        "first": {
+          "price": 300,
+          "cost_per_km": 1.034,
+          "duration_hours": 1.0
+        }
+      },
+      "layover_options": []
+    },
+    {
+      "origin": "DEL",
+      "destination": "COK",
+      "distance_km": 2200,
+      "direct_flight": {
+        "economy": {
+          "price": 180,
+          "cost_per_km": 0.082,
+          "duration_hours": 3.0
+        },
+        "premium_economy": {
+          "price": 270,
+          "cost_per_km": 0.123,
+          "duration_hours": 3.0
+        },
+        "business": {
+          "price": 500,
+          "cost_per_km": 0.227,
+          "duration_hours": 3.0
+        },
+        "first": {
+          "price": 850,
+          "cost_per_km": 0.386,
+          "duration_hours": 3.0
+        }
+      },
+      "layover_options": [
+        {
+          "via": "BOM",
+          "economy": {
+            "price": 165,
+            "cost_per_km": 0.075,
+            "duration_hours": 5.0,
+            "layover_hours": 1.0
+          },
+          "premium_economy": {
+            "price": 250,
+            "cost_per_km": 0.114,
+            "duration_hours": 5.0,
+            "layover_hours": 1.0
+          },
+          "business": {
+            "price": 460,
+            "cost_per_km": 0.209,
+            "duration_hours": 5.0,
+            "layover_hours": 1.0
+          },
+          "first": {
+            "price": 780,
+            "cost_per_km": 0.355,
+            "duration_hours": 5.0,
+            "layover_hours": 1.0
+          }
+        },
+        {
+          "via": "BLR",
+          "economy": {
+            "price": 160,
+            "cost_per_km": 0.073,
+            "duration_hours": 5.5,
+            "layover_hours": 1.5
+          },
+          "premium_economy": {
+            "price": 240,
+            "cost_per_km": 0.109,
+            "duration_hours": 5.5,
+            "layover_hours": 1.5
+          },
+          "business": {
+            "price": 450,
+            "cost_per_km": 0.205,
+            "duration_hours": 5.5,
+            "layover_hours": 1.5
+          },
+          "first": {
+            "price": 760,
+            "cost_per_km": 0.345,
+            "duration_hours": 5.5,
+            "layover_hours": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}

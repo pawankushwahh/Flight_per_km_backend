@@ -1,0 +1,144 @@
+{
+  "routes": [
+    {
+      "origin": "DEL",
+      "destination": "BOM",
+      "monthly_trends": [
+        {"month": "January", "avg_price": 110, "avg_cost_per_km": 0.085},
+        {"month": "February", "avg_price": 105, "avg_cost_per_km": 0.081},
+        {"month": "March", "avg_price": 115, "avg_cost_per_km": 0.089},
+        {"month": "April", "avg_price": 120, "avg_cost_per_km": 0.093},
+        {"month": "May", "avg_price": 125, "avg_cost_per_km": 0.097},
+        {"month": "June", "avg_price": 130, "avg_cost_per_km": 0.101},
+        {"month": "July", "avg_price": 140, "avg_cost_per_km": 0.108},
+        {"month": "August", "avg_price": 145, "avg_cost_per_km": 0.112},
+        {"month": "September", "avg_price": 125, "avg_cost_per_km": 0.097},
+        {"month": "October", "avg_price": 120, "avg_cost_per_km": 0.093},
+        {"month": "November", "avg_price": 110, "avg_cost_per_km": 0.085},
+        {"month": "December", "avg_price": 135, "avg_cost_per_km": 0.105}
+      ],
+      "weekly_trends": [
+        {"week": "1-7 days before", "avg_price": 145, "avg_cost_per_km": 0.112},
+        {"week": "8-14 days before", "avg_price": 130, "avg_cost_per_km": 0.101},
+        {"week": "15-21 days before", "avg_price": 120, "avg_cost_per_km": 0.093},
+        {"week": "22-30 days before", "avg_price": 110, "avg_cost_per_km": 0.085},
+        {"week": "31-60 days before", "avg_price": 100, "avg_cost_per_km": 0.077},
+        {"week": "61-90 days before", "avg_price": 105, "avg_cost_per_km": 0.081}
+      ],
+      "best_booking_time": "31-60 days before departure",
+      "best_travel_month": "February"
+    },
+    {
+      "origin": "BOM",
+      "destination": "BLR",
+      "monthly_trends": [
+        {"month": "January", "avg_price": 95, "avg_cost_per_km": 0.090},
+        {"month": "February", "avg_price": 90, "avg_cost_per_km": 0.085},
+        {"month": "March", "avg_price": 100, "avg_cost_per_km": 0.095},
+        {"month": "April", "avg_price": 105, "avg_cost_per_km": 0.100},
+        {"month": "May", "avg_price": 110, "avg_cost_per_km": 0.105},
+        {"month": "June", "avg_price": 115, "avg_cost_per_km": 0.110},
+        {"month": "July", "avg_price": 120, "avg_cost_per_km": 0.114},
+        {"month": "August", "avg_price": 125, "avg_cost_per_km": 0.119},
+        {"month": "September", "avg_price": 110, "avg_cost_per_km": 0.105},
+        {"month": "October", "avg_price": 105, "avg_cost_per_km": 0.100},
+        {"month": "November", "avg_price": 95, "avg_cost_per_km": 0.090},
+        {"month": "December", "avg_price": 115, "avg_cost_per_km": 0.110}
+      ],
+      "weekly_trends": [
+        {"week": "1-7 days before", "avg_price": 125, "avg_cost_per_km": 0.119},
+        {"week": "8-14 days before", "avg_price": 115, "avg_cost_per_km": 0.110},
+        {"week": "15-21 days before", "avg_price": 105, "avg_cost_per_km": 0.100},
+        {"week": "22-30 days before", "avg_price": 95, "avg_cost_per_km": 0.090},
+        {"week": "31-60 days before", "avg_price": 85, "avg_cost_per_km": 0.081},
+        {"week": "61-90 days before", "avg_price": 90, "avg_cost_per_km": 0.086}
+      ],
+      "best_booking_time": "31-60 days before departure",
+      "best_travel_month": "February"
+    },
+    {
+      "origin": "DEL",
+      "destination": "CCU",
+      "monthly_trends": [
+        {"month": "January", "avg_price": 145, "avg_cost_per_km": 0.088},
+        {"month": "February", "avg_price": 135, "avg_cost_per_km": 0.082},
+        {"month": "March", "avg_price": 150, "avg_cost_per_km": 0.091},
+        {"month": "April", "avg_price": 155, "avg_cost_per_km": 0.094},
+        {"month": "May", "avg_price": 160, "avg_cost_per_km": 0.097},
+        {"month": "June", "avg_price": 170, "avg_cost_per_km": 0.103},
+        {"month": "July", "avg_price": 180, "avg_cost_per_km": 0.109},
+        {"month": "August", "avg_price": 185, "avg_cost_per_km": 0.112},
+        {"month": "September", "avg_price": 165, "avg_cost_per_km": 0.100},
+        {"month": "October", "avg_price": 155, "avg_cost_per_km": 0.094},
+        {"month": "November", "avg_price": 140, "avg_cost_per_km": 0.085},
+        {"month": "December", "avg_price": 175, "avg_cost_per_km": 0.106}
+      ],
+      "weekly_trends": [
+        {"week": "1-7 days before", "avg_price": 185, "avg_cost_per_km": 0.112},
+        {"week": "8-14 days before", "avg_price": 170, "avg_cost_per_km": 0.103},
+        {"week": "15-21 days before", "avg_price": 155, "avg_cost_per_km": 0.094},
+        {"week": "22-30 days before", "avg_price": 145, "avg_cost_per_km": 0.088},
+        {"week": "31-60 days before", "avg_price": 130, "avg_cost_per_km": 0.079},
+        {"week": "61-90 days before", "avg_price": 135, "avg_cost_per_km": 0.082}
+      ],
+      "best_booking_time": "31-60 days before departure",
+      "best_travel_month": "February"
+    },
+    {
+      "origin": "BLR",
+      "destination": "MAA",
+      "monthly_trends": [
+        {"month": "January", "avg_price": 65, "avg_cost_per_km": 0.200},
+        {"month": "February", "avg_price": 60, "avg_cost_per_km": 0.185},
+        {"month": "March", "avg_price": 70, "avg_cost_per_km": 0.215},
+        {"month": "April", "avg_price": 75, "avg_cost_per_km": 0.230},
+        {"month": "May", "avg_price": 80, "avg_cost_per_km": 0.246},
+        {"month": "June", "avg_price": 85, "avg_cost_per_km": 0.262},
+        {"month": "July", "avg_price": 90, "avg_cost_per_km": 0.277},
+        {"month": "August", "avg_price": 95, "avg_cost_per_km": 0.292},
+        {"month": "September", "avg_price": 80, "avg_cost_per_km": 0.246},
+        {"month": "October", "avg_price": 75, "avg_cost_per_km": 0.230},
+        {"month": "November", "avg_price": 65, "avg_cost_per_km": 0.200},
+        {"month": "December", "avg_price": 85, "avg_cost_per_km": 0.262}
+      ],
+      "weekly_trends": [
+        {"week": "1-7 days before", "avg_price": 95, "avg_cost_per_km": 0.292},
+        {"week": "8-14 days before", "avg_price": 85, "avg_cost_per_km": 0.262},
+        {"week": "15-21 days before", "avg_price": 75, "avg_cost_per_km": 0.230},
+        {"week": "22-30 days before", "avg_price": 65, "avg_cost_per_km": 0.200},
+        {"week": "31-60 days before", "avg_price": 55, "avg_cost_per_km": 0.169},
+        {"week": "61-90 days before", "avg_price": 60, "avg_cost_per_km": 0.185}
+      ],
+      "best_booking_time": "31-60 days before departure",
+      "best_travel_month": "February"
+    },
+    {
+      "origin": "DEL",
+      "destination": "JAI",
+      "monthly_trends": [
+        {"month": "January", "avg_price": 70, "avg_cost_per_km": 0.210},
+        {"month": "February", "avg_price": 65, "avg_cost_per_km": 0.195},
+        {"month": "March", "avg_price": 75, "avg_cost_per_km": 0.225},
+        {"month": "April", "avg_price": 80, "avg_cost_per_km": 0.240},
+        {"month": "May", "avg_price": 85, "avg_cost_per_km": 0.255},
+        {"month": "June", "avg_price": 90, "avg_cost_per_km": 0.270},
+        {"month": "July", "avg_price": 95, "avg_cost_per_km": 0.285},
+        {"month": "August", "avg_price": 100, "avg_cost_per_km": 0.300},
+        {"month": "September", "avg_price": 85, "avg_cost_per_km": 0.255},
+        {"month": "October", "avg_price": 80, "avg_cost_per_km": 0.240},
+        {"month": "November", "avg_price": 70, "avg_cost_per_km": 0.210},
+        {"month": "December", "avg_price": 90, "avg_cost_per_km": 0.270}
+      ],
+      "weekly_trends": [
+        {"week": "1-7 days before", "avg_price": 100, "avg_cost_per_km": 0.300},
+        {"week": "8-14 days before", "avg_price": 90, "avg_cost_per_km": 0.270},
+        {"week": "15-21 days before", "avg_price": 80, "avg_cost_per_km": 0.240},
+        {"week": "22-30 days before", "avg_price": 70, "avg_cost_per_km": 0.210},
+        {"week": "31-60 days before", "avg_price": 60, "avg_cost_per_km": 0.180},
+        {"week": "61-90 days before", "avg_price": 65, "avg_cost_per_km": 0.195}
+      ],
+      "best_booking_time": "31-60 days before departure",
+      "best_travel_month": "February"
+    }
+  ]
+}

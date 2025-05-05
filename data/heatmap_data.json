@@ -1,0 +1,168 @@
+{
+  "regions": [
+    {
+      "name": "North India",
+      "avg_cost_per_km": 0.095,
+      "states": [
+        {
+          "name": "Delhi",
+          "code": "DL",
+          "avg_cost_per_km": 0.090,
+          "routes": [
+            {"from": "DEL", "to": "BOM", "cost_per_km": 0.093},
+            {"from": "DEL", "to": "LKO", "cost_per_km": 0.088},
+            {"from": "DEL", "to": "ATQ", "cost_per_km": 0.095},
+            {"from": "DEL", "to": "IXC", "cost_per_km": 0.085}
+          ]
+        },
+        {
+          "name": "Uttar Pradesh",
+          "code": "UP",
+          "avg_cost_per_km": 0.100,
+          "routes": [
+            {"from": "LKO", "to": "DEL", "cost_per_km": 0.088},
+            {"from": "VNS", "to": "DEL", "cost_per_km": 0.105},
+            {"from": "LKO", "to": "BOM", "cost_per_km": 0.110}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "West India",
+      "avg_cost_per_km": 0.085,
+      "states": [
+        {
+          "name": "Maharashtra",
+          "code": "MH",
+          "avg_cost_per_km": 0.080,
+          "routes": [
+            {"from": "BOM", "to": "DEL", "cost_per_km": 0.093},
+            {"from": "BOM", "to": "PNQ", "cost_per_km": 0.120},
+            {"from": "BOM", "to": "GOI", "cost_per_km": 0.085},
+            {"from": "BOM", "to": "NAG", "cost_per_km": 0.075}
+          ]
+        },
+        {
+          "name": "Gujarat",
+          "code": "GJ",
+          "avg_cost_per_km": 0.090,
+          "routes": [
+            {"from": "AMD", "to": "DEL", "cost_per_km": 0.085},
+            {"from": "AMD", "to": "BOM", "cost_per_km": 0.090},
+            {"from": "AMD", "to": "BDQ", "cost_per_km": 0.110}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "South India",
+      "avg_cost_per_km": 0.080,
+      "states": [
+        {
+          "name": "Karnataka",
+          "code": "KA",
+          "avg_cost_per_km": 0.075,
+          "routes": [
+            {"from": "BLR", "to": "DEL", "cost_per_km": 0.086},
+            {"from": "BLR", "to": "BOM", "cost_per_km": 0.085},
+            {"from": "BLR", "to": "MAA", "cost_per_km": 0.075},
+            {"from": "BLR", "to": "HYD", "cost_per_km": 0.070}
+          ]
+        },
+        {
+          "name": "Tamil Nadu",
+          "code": "TN",
+          "avg_cost_per_km": 0.080,
+          "routes": [
+            {"from": "MAA", "to": "BLR", "cost_per_km": 0.075},
+            {"from": "MAA", "to": "DEL", "cost_per_km": 0.090},
+            {"from": "MAA", "to": "BOM", "cost_per_km": 0.085},
+            {"from": "MAA", "to": "COK", "cost_per_km": 0.070}
+          ]
+        },
+        {
+          "name": "Kerala",
+          "code": "KL",
+          "avg_cost_per_km": 0.085,
+          "routes": [
+            {"from": "COK", "to": "DEL", "cost_per_km": 0.095},
+            {"from": "COK", "to": "BOM", "cost_per_km": 0.085},
+            {"from": "COK", "to": "MAA", "cost_per_km": 0.070},
+            {"from": "TRV", "to": "BLR", "cost_per_km": 0.080}
+          ]
+        },
+        {
+          "name": "Andhra Pradesh & Telangana",
+          "code": "AP_TG",
+          "avg_cost_per_km": 0.080,
+          "routes": [
+            {"from": "HYD", "to": "DEL", "cost_per_km": 0.090},
+            {"from": "HYD", "to": "BOM", "cost_per_km": 0.080},
+            {"from": "HYD", "to": "BLR", "cost_per_km": 0.070},
+            {"from": "HYD", "to": "MAA", "cost_per_km": 0.075}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "East India",
+      "avg_cost_per_km": 0.100,
+      "states": [
+        {
+          "name": "West Bengal",
+          "code": "WB",
+          "avg_cost_per_km": 0.095,
+          "routes": [
+            {"from": "CCU", "to": "DEL", "cost_per_km": 0.095},
+            {"from": "CCU", "to": "BOM", "cost_per_km": 0.096},
+            {"from": "CCU", "to": "BLR", "cost_per_km": 0.090},
+            {"from": "CCU", "to": "GAU", "cost_per_km": 0.085}
+          ]
+        },
+        {
+          "name": "Assam",
+          "code": "AS",
+          "avg_cost_per_km": 0.105,
+          "routes": [
+            {"from": "GAU", "to": "DEL", "cost_per_km": 0.110},
+            {"from": "GAU", "to": "CCU", "cost_per_km": 0.085},
+            {"from": "GAU", "to": "BOM", "cost_per_km": 0.115}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Central India",
+      "avg_cost_per_km": 0.090,
+      "states": [
+        {
+          "name": "Madhya Pradesh",
+          "code": "MP",
+          "avg_cost_per_km": 0.090,
+          "routes": [
+            {"from": "BHO", "to": "DEL", "cost_per_km": 0.085},
+            {"from": "BHO", "to": "BOM", "cost_per_km": 0.090},
+            {"from": "IDR", "to": "DEL", "cost_per_km": 0.095}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "International Connections",
+      "avg_cost_per_km": 0.105,
+      "routes": [
+        {"from": "DEL", "to": "DXB", "cost_per_km": 0.090},
+        {"from": "BOM", "to": "DXB", "cost_per_km": 0.085},
+        {"from": "DEL", "to": "SIN", "cost_per_km": 0.110},
+        {"from": "BOM", "to": "SIN", "cost_per_km": 0.105},
+        {"from": "DEL", "to": "LHR", "cost_per_km": 0.120},
+        {"from": "BOM", "to": "LHR", "cost_per_km": 0.115}
+      ]
+    }
+  ],
+  "india_avg_cost_per_km": 0.090,
+  "cheapest_region": "South India",
+  "most_expensive_region": "East India",
+  "cheapest_state": "Karnataka",
+  "most_expensive_state": "Assam"
+}

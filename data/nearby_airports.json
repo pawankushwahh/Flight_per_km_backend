@@ -1,0 +1,1244 @@
+{
+  "airports": [
+    {
+      "code": "AMD",
+      "name": "Sardar Vallabhbhai Patel International Airport",
+      "city": "Ahmedabad",
+      "country": "India",
+      "lat": 23.0772,
+      "lon": 72.6347,
+      "nearby": [
+        {
+          "code": "BLR",
+          "name": "Bengaluru International Airport",
+          "city": "Bangalore",
+          "country": "India",
+          "lat": 13.1979,
+          "lon": 77.7063,
+          "distance": 1230,
+          "avg_cost_difference": 11.9
+        }
+      ]
+    },
+    {
+      "code": "BLR",
+      "name": "Bengaluru International Airport",
+      "city": "Bangalore",
+      "country": "India",
+      "lat": 13.1979,
+      "lon": 77.7063,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 1222,
+          "avg_cost_difference": 11.91
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1547,
+          "avg_cost_difference": 7.11
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 368,
+          "avg_cost_difference": 27.54
+        },
+        {
+          "code": "DEL",
+          "name": "Indira Gandhi International Airport",
+          "city": "New Delhi",
+          "country": "India",
+          "lat": 28.5665,
+          "lon": 77.1031,
+          "distance": 2149,
+          "avg_cost_difference": 4.14
+        },
+        {
+          "code": "GOI",
+          "name": "Dabolim Airport",
+          "city": "Dabolim",
+          "country": "India",
+          "lat": 15.3808,
+          "lon": 73.8314,
+          "distance": 482,
+          "avg_cost_difference": 21.26
+        },
+        {
+          "code": "HYD",
+          "name": "Rajiv Gandhi International Airport Shamshabad",
+          "city": "Hyderabad",
+          "country": "India",
+          "lat": 17.23132,
+          "lon": 78.42986,
+          "distance": 499,
+          "avg_cost_difference": 17.31
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 1855,
+          "avg_cost_difference": 5.71
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 1864,
+          "avg_cost_difference": 9.16
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 1946,
+          "avg_cost_difference": 7.19
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 306,
+          "avg_cost_difference": 25.98
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 2186,
+          "avg_cost_difference": 14.01
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 2328,
+          "avg_cost_difference": 11.89
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 377,
+          "avg_cost_difference": 39.94
+        },
+        {
+          "code": "IXS",
+          "name": "Silchar Airport",
+          "city": "Silchar",
+          "country": "India",
+          "lat": 24.9129,
+          "lon": 92.9787,
+          "distance": 2064,
+          "avg_cost_difference": 7.89
+        },
+        {
+          "code": "IXU",
+          "name": "Aurangabad Airport",
+          "city": "Aurangabad",
+          "country": "India",
+          "lat": 19.8627,
+          "lon": 75.3981,
+          "distance": 781,
+          "avg_cost_difference": 23.18
+        },
+        {
+          "code": "IXY",
+          "name": "Kandla Airport",
+          "city": "Kandla",
+          "country": "India",
+          "lat": 23.1127,
+          "lon": 70.1003,
+          "distance": 1363,
+          "avg_cost_difference": 31.22
+        },
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 1640,
+          "avg_cost_difference": 10.33
+        },
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 1640,
+          "avg_cost_difference": 10.6
+        },
+        {
+          "code": "MAA",
+          "name": "Chennai International Airport",
+          "city": "Chennai",
+          "country": "India",
+          "lat": 12.99001,
+          "lon": 80.1693,
+          "distance": 290,
+          "avg_cost_difference": 38.53
+        }
+      ]
+    },
+    {
+      "code": "BOM",
+      "name": "Chhatrapati Shivaji International Airport",
+      "city": "Mumbai",
+      "country": "India",
+      "lat": 19.0887,
+      "lon": 72.8679,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 445,
+          "avg_cost_difference": 29.28
+        },
+        {
+          "code": "BLR",
+          "name": "Bengaluru International Airport",
+          "city": "Bangalore",
+          "country": "India",
+          "lat": 13.1979,
+          "lon": 77.7063,
+          "distance": 834,
+          "avg_cost_difference": 14.33
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1665,
+          "avg_cost_difference": 9.55
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 1063,
+          "avg_cost_difference": 13.44
+        },
+        {
+          "code": "GOI",
+          "name": "Dabolim Airport",
+          "city": "Dabolim",
+          "country": "India",
+          "lat": 15.3808,
+          "lon": 73.8314,
+          "distance": 424,
+          "avg_cost_difference": 25.13
+        },
+        {
+          "code": "HYD",
+          "name": "Rajiv Gandhi International Airport Shamshabad",
+          "city": "Hyderabad",
+          "country": "India",
+          "lat": 17.23132,
+          "lon": 78.42986,
+          "distance": 619,
+          "avg_cost_difference": 16.93
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 1792,
+          "avg_cost_difference": 11.78
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 1347,
+          "avg_cost_difference": 9.16
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 715,
+          "avg_cost_difference": 14.43
+        },
+        {
+          "code": "IXG",
+          "name": "Belgaum Airport",
+          "city": "",
+          "country": "India",
+          "lat": 15.8593,
+          "lon": 74.6183,
+          "distance": 405,
+          "avg_cost_difference": 17.63
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 1524,
+          "avg_cost_difference": 17.08
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 1735,
+          "avg_cost_difference": 12.86
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 1172,
+          "avg_cost_difference": 18.79
+        },
+        {
+          "code": "IXR",
+          "name": "Birsa Munda Airport",
+          "city": "Ranchi",
+          "country": "India",
+          "lat": 23.3143,
+          "lon": 85.3217,
+          "distance": 1373,
+          "avg_cost_difference": 8.51
+        },
+        {
+          "code": "IXS",
+          "name": "Silchar Airport",
+          "city": "Silchar",
+          "country": "India",
+          "lat": 24.9129,
+          "lon": 92.9787,
+          "distance": 2169,
+          "avg_cost_difference": 7.07
+        },
+        {
+          "code": "IXU",
+          "name": "Aurangabad Airport",
+          "city": "Aurangabad",
+          "country": "India",
+          "lat": 19.8627,
+          "lon": 75.3981,
+          "distance": 279,
+          "avg_cost_difference": 58.47
+        },
+        {
+          "code": "IXY",
+          "name": "Kandla Airport",
+          "city": "Kandla",
+          "country": "India",
+          "lat": 23.1127,
+          "lon": 70.1003,
+          "distance": 532,
+          "avg_cost_difference": 25.29
+        },
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 2282,
+          "avg_cost_difference": 8.48
+        },
+        {
+          "code": "MAA",
+          "name": "Chennai International Airport",
+          "city": "Chennai",
+          "country": "India",
+          "lat": 12.99001,
+          "lon": 80.1693,
+          "distance": 1034,
+          "avg_cost_difference": 10.82
+        }
+      ]
+    },
+    {
+      "code": "CCU",
+      "name": "Netaji Subhash Chandra Bose International Airport",
+      "city": "Kolkata",
+      "country": "India",
+      "lat": 22.6547,
+      "lon": 88.4467,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 1619,
+          "avg_cost_difference": 6.27
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 1890,
+          "avg_cost_difference": 6.07
+        },
+        {
+          "code": "DEL",
+          "name": "Indira Gandhi International Airport",
+          "city": "New Delhi",
+          "country": "India",
+          "lat": 28.5665,
+          "lon": 77.1031,
+          "distance": 1300,
+          "avg_cost_difference": 10.54
+        },
+        {
+          "code": "GOI",
+          "name": "Dabolim Airport",
+          "city": "Dabolim",
+          "country": "India",
+          "lat": 15.3808,
+          "lon": 73.8314,
+          "distance": 1734,
+          "avg_cost_difference": 6.55
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 316,
+          "avg_cost_difference": 26.93
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 448,
+          "avg_cost_difference": 38.47
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 1461,
+          "avg_cost_difference": 9.0
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 1793,
+          "avg_cost_difference": 7.99
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 1740,
+          "avg_cost_difference": 14.9
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 1661,
+          "avg_cost_difference": 16.76
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 1801,
+          "avg_cost_difference": 10.76
+        }
+      ]
+    },
+    {
+      "code": "COK",
+      "name": "Cochin International Airport",
+      "city": "Cochin",
+      "country": "India",
+      "lat": 10.152,
+      "lon": 76.4019,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 1491,
+          "avg_cost_difference": 6.89
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 2192,
+          "avg_cost_difference": 5.45
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 2223,
+          "avg_cost_difference": 7.04
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 2283,
+          "avg_cost_difference": 6.38
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 354,
+          "avg_cost_difference": 35.6
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 2511,
+          "avg_cost_difference": 8.48
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 2670,
+          "avg_cost_difference": 10.68
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 189,
+          "avg_cost_difference": 124.1
+        }
+      ]
+    },
+    {
+      "code": "DEL",
+      "name": "Indira Gandhi International Airport",
+      "city": "New Delhi",
+      "country": "India",
+      "lat": 28.5665,
+      "lon": 77.1031,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 754,
+          "avg_cost_difference": 13.42
+        },
+        {
+          "code": "BLR",
+          "name": "Bengaluru International Airport",
+          "city": "Bangalore",
+          "country": "India",
+          "lat": 13.1979,
+          "lon": 77.7063,
+          "distance": 2150,
+          "avg_cost_difference": 4.6
+        },
+        {
+          "code": "BOM",
+          "name": "Chhatrapati Shivaji International Airport",
+          "city": "Mumbai",
+          "country": "India",
+          "lat": 19.0887,
+          "lon": 72.8679,
+          "distance": 1148,
+          "avg_cost_difference": 8.96
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1300,
+          "avg_cost_difference": 11.11
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 2049,
+          "avg_cost_difference": 4.84
+        },
+        {
+          "code": "HYD",
+          "name": "Rajiv Gandhi International Airport Shamshabad",
+          "city": "Hyderabad",
+          "country": "India",
+          "lat": 17.23132,
+          "lon": 78.42986,
+          "distance": 1268,
+          "avg_cost_difference": 8.58
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 1502,
+          "avg_cost_difference": 8.95
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 1125,
+          "avg_cost_difference": 17.95
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 237,
+          "avg_cost_difference": 68.14
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 1751,
+          "avg_cost_difference": 7.28
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 508,
+          "avg_cost_difference": 47.83
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 621,
+          "avg_cost_difference": 36.55
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 621,
+          "avg_cost_difference": 35.97
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 2086,
+          "avg_cost_difference": 6.93
+        },
+        {
+          "code": "IXY",
+          "name": "Kandla Airport",
+          "city": "Kandla",
+          "country": "India",
+          "lat": 23.1127,
+          "lon": 70.1003,
+          "distance": 927,
+          "avg_cost_difference": 45.13
+        },
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 2485,
+          "avg_cost_difference": 6.41
+        },
+        {
+          "code": "MAA",
+          "name": "Chennai International Airport",
+          "city": "Chennai",
+          "country": "India",
+          "lat": 12.99001,
+          "lon": 80.1693,
+          "distance": 1760,
+          "avg_cost_difference": 6.96
+        }
+      ]
+    },
+    {
+      "code": "GOI",
+      "name": "Dabolim Airport",
+      "city": "Dabolim",
+      "country": "India",
+      "lat": 15.3808,
+      "lon": 73.8314,
+      "nearby": [
+        {
+          "code": "BLR",
+          "name": "Bengaluru International Airport",
+          "city": "Bangalore",
+          "country": "India",
+          "lat": 13.1979,
+          "lon": 77.7063,
+          "distance": 569,
+          "avg_cost_difference": 15.23
+        }
+      ]
+    },
+    {
+      "code": "HYD",
+      "name": "Rajiv Gandhi International Airport Shamshabad",
+      "city": "Hyderabad",
+      "country": "India",
+      "lat": 17.23132,
+      "lon": 78.42986,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 889,
+          "avg_cost_difference": 13.57
+        },
+        {
+          "code": "BOM",
+          "name": "Chhatrapati Shivaji International Airport",
+          "city": "Mumbai",
+          "country": "India",
+          "lat": 19.0887,
+          "lon": 72.8679,
+          "distance": 620,
+          "avg_cost_difference": 19.88
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1208,
+          "avg_cost_difference": 10.81
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1208,
+          "avg_cost_difference": 10.28
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 817,
+          "avg_cost_difference": 11.65
+        },
+        {
+          "code": "GOI",
+          "name": "Dabolim Airport",
+          "city": "Dabolim",
+          "country": "India",
+          "lat": 15.3808,
+          "lon": 73.8314,
+          "distance": 533,
+          "avg_cost_difference": 16.28
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 1524,
+          "avg_cost_difference": 7.33
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 1464,
+          "avg_cost_difference": 12.05
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 1505,
+          "avg_cost_difference": 9.28
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 609,
+          "avg_cost_difference": 19.98
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 1756,
+          "avg_cost_difference": 8.57
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 1881,
+          "avg_cost_difference": 13.43
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 823,
+          "avg_cost_difference": 21.32
+        },
+        {
+          "code": "IXR",
+          "name": "Birsa Munda Airport",
+          "city": "Ranchi",
+          "country": "India",
+          "lat": 23.3143,
+          "lon": 85.3217,
+          "distance": 987,
+          "avg_cost_difference": 13.88
+        },
+        {
+          "code": "IXS",
+          "name": "Silchar Airport",
+          "city": "Silchar",
+          "country": "India",
+          "lat": 24.9129,
+          "lon": 92.9787,
+          "distance": 1732,
+          "avg_cost_difference": 11.11
+        },
+        {
+          "code": "IXU",
+          "name": "Aurangabad Airport",
+          "city": "Aurangabad",
+          "country": "India",
+          "lat": 19.8627,
+          "lon": 75.3981,
+          "distance": 434,
+          "avg_cost_difference": 37.77
+        },
+        {
+          "code": "IXY",
+          "name": "Kandla Airport",
+          "city": "Kandla",
+          "country": "India",
+          "lat": 23.1127,
+          "lon": 70.1003,
+          "distance": 1088,
+          "avg_cost_difference": 35.93
+        },
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 1659,
+          "avg_cost_difference": 8.04
+        },
+        {
+          "code": "MAA",
+          "name": "Chennai International Airport",
+          "city": "Chennai",
+          "country": "India",
+          "lat": 12.99001,
+          "lon": 80.1693,
+          "distance": 507,
+          "avg_cost_difference": 20.16
+        },
+        {
+          "code": "MAA",
+          "name": "Chennai International Airport",
+          "city": "Chennai",
+          "country": "India",
+          "lat": 12.99001,
+          "lon": 80.1693,
+          "distance": 507,
+          "avg_cost_difference": 21.28
+        }
+      ]
+    },
+    {
+      "code": "IXR",
+      "name": "Birsa Munda Airport",
+      "city": "Ranchi",
+      "country": "India",
+      "lat": 23.3143,
+      "lon": 85.3217,
+      "nearby": [
+        {
+          "code": "IXZ",
+          "name": "Vir Savarkar International Airport",
+          "city": "Port Blair",
+          "country": "India",
+          "lat": 11.6412,
+          "lon": 92.7297,
+          "distance": 1517,
+          "avg_cost_difference": 11.27
+        }
+      ]
+    },
+    {
+      "code": "IXS",
+      "name": "Silchar Airport",
+      "city": "Silchar",
+      "country": "India",
+      "lat": 24.9129,
+      "lon": 92.9787,
+      "nearby": [
+        {
+          "code": "IXU",
+          "name": "Aurangabad Airport",
+          "city": "Aurangabad",
+          "country": "India",
+          "lat": 19.8627,
+          "lon": 75.3981,
+          "distance": 1891,
+          "avg_cost_difference": 7.91
+        }
+      ]
+    },
+    {
+      "code": "MAA",
+      "name": "Chennai International Airport",
+      "city": "Chennai",
+      "country": "India",
+      "lat": 12.99001,
+      "lon": 80.1693,
+      "nearby": [
+        {
+          "code": "AMD",
+          "name": "Sardar Vallabhbhai Patel International Airport",
+          "city": "Ahmedabad",
+          "country": "India",
+          "lat": 23.0772,
+          "lon": 72.6347,
+          "distance": 1374,
+          "avg_cost_difference": 7.66
+        },
+        {
+          "code": "BOM",
+          "name": "Chhatrapati Shivaji International Airport",
+          "city": "Mumbai",
+          "country": "India",
+          "lat": 19.0887,
+          "lon": 72.8679,
+          "distance": 1030,
+          "avg_cost_difference": 12.31
+        },
+        {
+          "code": "CCU",
+          "name": "Netaji Subhash Chandra Bose International Airport",
+          "city": "Kolkata",
+          "country": "India",
+          "lat": 22.6547,
+          "lon": 88.4467,
+          "distance": 1359,
+          "avg_cost_difference": 8.12
+        },
+        {
+          "code": "COK",
+          "name": "Cochin International Airport",
+          "city": "Cochin",
+          "country": "India",
+          "lat": 10.152,
+          "lon": 76.4019,
+          "distance": 518,
+          "avg_cost_difference": 21.46
+        },
+        {
+          "code": "GOI",
+          "name": "Dabolim Airport",
+          "city": "Dabolim",
+          "country": "India",
+          "lat": 15.3808,
+          "lon": 73.8314,
+          "distance": 733,
+          "avg_cost_difference": 14.88
+        },
+        {
+          "code": "IXA",
+          "name": "Agartala Airport",
+          "city": "Agartala",
+          "country": "India",
+          "lat": 23.887,
+          "lon": 91.2404,
+          "distance": 1682,
+          "avg_cost_difference": 6.85
+        },
+        {
+          "code": "IXB",
+          "name": "Bagdogra Airport",
+          "city": "Siliguri",
+          "country": "India",
+          "lat": 26.6812,
+          "lon": 88.3286,
+          "distance": 1743,
+          "avg_cost_difference": 9.83
+        },
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 1996,
+          "avg_cost_difference": 7.86
+        },
+        {
+          "code": "IXE",
+          "name": "Mangalore International Airport",
+          "city": "Mangalore",
+          "country": "India",
+          "lat": 12.9613,
+          "lon": 74.8901,
+          "distance": 573,
+          "avg_cost_difference": 22.66
+        },
+        {
+          "code": "IXJ",
+          "name": "Jammu Airport",
+          "city": "Jammu",
+          "country": "India",
+          "lat": 32.6891,
+          "lon": 74.8374,
+          "distance": 2257,
+          "avg_cost_difference": 13.14
+        },
+        {
+          "code": "IXL",
+          "name": "Leh Kushok Bakula Rimpochee Airport",
+          "city": "Leh",
+          "country": "India",
+          "lat": 34.1359,
+          "lon": 77.5465,
+          "distance": 2367,
+          "avg_cost_difference": 9.82
+        },
+        {
+          "code": "IXM",
+          "name": "Madurai Airport",
+          "city": "Madurai",
+          "country": "India",
+          "lat": 9.83451,
+          "lon": 78.0934,
+          "distance": 418,
+          "avg_cost_difference": 21.85
+        },
+        {
+          "code": "IXR",
+          "name": "Birsa Munda Airport",
+          "city": "Ranchi",
+          "country": "India",
+          "lat": 23.3143,
+          "lon": 85.3217,
+          "distance": 1270,
+          "avg_cost_difference": 11.71
+        },
+        {
+          "code": "IXS",
+          "name": "Silchar Airport",
+          "city": "Silchar",
+          "country": "India",
+          "lat": 24.9129,
+          "lon": 92.9787,
+          "distance": 1887,
+          "avg_cost_difference": 9.04
+        },
+        {
+          "code": "IXU",
+          "name": "Aurangabad Airport",
+          "city": "Aurangabad",
+          "country": "India",
+          "lat": 19.8627,
+          "lon": 75.3981,
+          "distance": 918,
+          "avg_cost_difference": 14.43
+        }
+      ]
+    }
+  ]
+}

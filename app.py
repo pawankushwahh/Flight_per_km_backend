@@ -388,7 +388,7 @@ def raw_compare_data():
         }), 500
 
 # Route for best routes from an origin airport
-@app.route('/api/dummy-compare', methods=['POST'])
+@app.route('/api/route-find', methods=['POST'])
 def best_routes_finder():
     try:
         # Get request data

@@ -108,9 +108,54 @@ def predict_prices():
                 'error': f'Route data not found for {origin} to {destination}'
             }), 404
         
+        # Extract monthly price trends
+        monthly_prices = route_trends['monthly_trends']
+        weekly_prices = route_trends.get('weekly_trends', [])
+        
+        # Calculate lowest and highest prices from monthly trends
+        prices = [month['avg_price'] for month in monthly_prices]
+        lowest_price = min(prices)
+        highest_price = max(prices)
+        
+        # Get current price (using November as 'current' for demonstration)
+        current_month = 'November'  # This would be the current month in a real app
+        current_price = next((month['avg_price'] for month in monthly_prices if month['month'] == current_month), prices[0])
+        
+        # Find best month to travel (lowest price)
+        best_month = next((month['month'] for month in monthly_prices if month['avg_price'] == lowest_price), 'Unknown')
+        
+        # Determine best time to book from weekly trends if available
+        best_time_to_book = 'Book 1-2 months in advance for best prices'
+        if weekly_prices:
+            # Find the week with the lowest price
+            best_week = min(weekly_prices, key=lambda x: x['avg_price'])
+            best_time_to_book = f'Book {best_week["week"]} for the best price (₹{best_week["avg_price"]})'
+        
+        # Calculate price confidence based on variance in prices
+        price_variance = max(0.1, (highest_price - lowest_price) / highest_price)
+        if price_variance < 0.15:
+            confidence = 'High'
+        elif price_variance < 0.3:
+            confidence = 'Medium'
+        else:
+            confidence = 'Low'
+        
+        # Prepare prediction result
+        prediction_data = {
+            'origin': origin,
+            'destination': destination,
+            'current_price': current_price,
+            'lowest_price': lowest_price,
+            'highest_price': highest_price,
+            'price_confidence': confidence,
+            'best_time_to_book': f'Travel in {best_month} and {best_time_to_book}',
+            'monthly_prices': monthly_prices,
+            'savings_percentage': round(((current_price - lowest_price) / current_price) * 100, 1)
+        }
+        
         return jsonify({
             'success': True,
-            'data': route_trends
+            'data': prediction_data
         })
     except Exception as e:
         return jsonify({
@@ -332,6 +377,75 @@ def raw_compare_data():
         if limit and limit > 0:
             compare_data['routes'] = compare_data['routes'][:limit]
         
+        return jsonify({
+            'success': True,
+            'data': compare_data
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+# Route for best routes from an origin airport
+@app.route('/api/dummy-compare', methods=['POST'])
+def best_routes_finder():
+    try:
+        # Get request data
+        data = request.get_json()
+        
+        # Check if this is a best routes request
+        if data and data.get('findBestRoutes'):
+            origin = data.get('origin')
+            if not origin:
+                return jsonify({
+                    'success': False,
+                    'error': 'Origin airport is required'
+                }), 400
+                
+            # Load compare data
+            compare_data = load_csv_data('compare_data_new.csv')
+            
+            # Filter routes for the specified origin
+            origin_routes = [r for r in compare_data if r['Start'] == origin]
+            
+            # Load trend data to get best travel months
+            trend_data = load_json_data('trend_data.json')
+            routes_with_trends = []
+            
+            # Enhance route data with trend information when available
+            for route in origin_routes:
+                # Create a base route object
+                route_obj = {
+                    'origin': route['Start'],
+                    'destination': route['End'],
+                    'distance': route['Distance'],
+                    'price': route['Price'],
+                    'cost_per_km': route['CostPerKm']
+                }
+                
+                # Look for trend data for this route
+                route_trend = next((t for t in trend_data['routes'] 
+                                  if t['origin'] == route['Start'] and 
+                                  t['destination'] == route['End']), None)
+                
+                # Add best travel month if available
+                if route_trend and 'best_travel_month' in route_trend:
+                    route_obj['best_travel_month'] = route_trend['best_travel_month']
+                    route_obj['monthly_trends'] = route_trend.get('monthly_trends', [])
+                    route_obj['best_booking_time'] = route_trend.get('best_booking_time', '')
+                
+                routes_with_trends.append(route_obj)
+            
+            return jsonify({
+                'success': True,
+                'data': routes_with_trends
+            })
+        
+        # Regular compare data request
+        compare_data = load_csv_data('compare_data_new.csv')
+        
+        # Return the data
         return jsonify({
             'success': True,
             'data': compare_data

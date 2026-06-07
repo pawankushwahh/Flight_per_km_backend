@@ -61,7 +61,8 @@ To test with the UI, also clone and serve the [frontend repo](https://github.com
 | File | Contents |
 |------|----------|
 | [README.md](README.md) | This file — API reference, setup, deploy |
-| [docs/DATA.md](docs/DATA.md) | Data schemas, units, feature mapping, scraping workflow |
+| [docs/DATA.md](docs/DATA.md) | Data schemas, units, feature mapping |
+| [docs/SCRAPING.md](docs/SCRAPING.md) | What to scrape, sources, formats, phased rollout |
 | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Render deploy from GitHub, post-push checklist |
 | [data/templates/](data/templates/) | CSV/JSON templates for scraper output |
 

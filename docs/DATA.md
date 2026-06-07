@@ -1,16 +1,42 @@
 # Data Guide — Flight Cost Intelligence Backend
 
-This document describes every data file the backend uses: what each feature needs, exact field formats, units, and how to replace dummy data with scraped originals.
+This document describes every data file the backend uses: what each feature needs, exact field formats, units, and how to replace dummy data with scraped originals. For a full scraping guide (sources, formats, phased rollout), see [SCRAPING.md](SCRAPING.md).
 
 **Related docs:**
 
 | Document | Purpose |
 |----------|---------|
 | [../README.md](../README.md) | API reference and local setup |
+| [SCRAPING.md](SCRAPING.md) | **What to scrape, from where, and in which format** |
 | [DEPLOYMENT.md](DEPLOYMENT.md) | Push to GitHub → Render auto-deploy |
 | [../data/templates/README.md](../data/templates/README.md) | Scraper output templates |
 
 **After updating data:** run `python scripts/generate_data.py`, push to GitHub, wait for Render redeploy.
+
+---
+
+## Architecture (no database)
+
+The backend has **no database or external API calls at runtime**. All responses come from static files in `data/`, loaded into an in-memory cache when the server starts.
+
+```
+Canonical CSVs (scrape these first)
+  compare_data_new.csv
+  merged_flight_data.csv
+        │
+        ▼  python scripts/generate_data.py
+Derived JSON (scrape individually, or auto-generate as placeholders)
+  compare_data.json
+  trend_data.json
+  class_layover_data.json
+  nearby_airports.json
+  heatmap_data.json
+        │
+        ▼  Flask app.py (cached at startup)
+  /api/* endpoints → frontend pages
+```
+
+**Current dataset:** ~118 directed routes, ~26 airports. The two CSVs are the canonical pricing source. Most JSON files are **synthetic** (seasonal multipliers, cabin multipliers, nearest-airport math) until replaced with scraped data.
 
 ---
 
@@ -349,6 +375,8 @@ Nested regional structure. API flattens to `data.routes[]` for the frontend map.
 ---
 
 ## Workflow: replacing dummy data with scraped data
+
+> **Full scraping guide:** See [SCRAPING.md](SCRAPING.md) for per-feature scrape requirements, suggested sources, phased rollout, and coverage rules.
 
 ### Step 1 — Scrape and update canonical CSVs
 

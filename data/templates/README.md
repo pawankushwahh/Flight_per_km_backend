@@ -18,6 +18,6 @@ After updating the two CSV files, run:
 python scripts/generate_data.py
 ```
 
-See [docs/DATA.md](../../docs/DATA.md) for full field reference.
+See [docs/DATA.md](../../docs/DATA.md) for full field reference and [docs/SCRAPING.md](../../docs/SCRAPING.md) for what to scrape and from where.
 
 After pushing updated data to GitHub, Render auto-redeploys and reloads the cache. See [docs/DEPLOYMENT.md](../../docs/DEPLOYMENT.md).

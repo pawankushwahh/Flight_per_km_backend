@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "origin": "DEL",
+      "destination": "BOM",
+      "origin_lat": 28.5665,
+      "origin_lon": 77.1031,
+      "destination_lat": 19.0887,
+      "destination_lon": 72.8679,
+      "price": 11435,
+      "airline": "IndiGo"
+    }
+  ]
+}

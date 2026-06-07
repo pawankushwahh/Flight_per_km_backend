@@ -8,5 +8,5 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.9.0
-    healthCheckPath: /
+    healthCheckPath: /api/ping
     autoDeploy: true

@@ -1,0 +1,19 @@
+{
+  "regions": [
+    {
+      "name": "North India",
+      "avg_cost_per_km": 11.2,
+      "states": [
+        {
+          "name": "Delhi",
+          "code": "DE",
+          "avg_cost_per_km": 10.5,
+          "routes": [
+            { "from": "DEL", "to": "BOM", "cost_per_km": 8.86 },
+            { "from": "DEL", "to": "BLR", "cost_per_km": 9.12 }
+          ]
+        }
+      ]
+    }
+  ]
+}

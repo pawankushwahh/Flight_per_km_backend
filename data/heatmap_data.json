@@ -1,168 +1,715 @@
 {
   "regions": [
     {
-      "name": "North India",
-      "avg_cost_per_km": 0.095,
+      "name": "East India",
+      "avg_cost_per_km": 13.64,
       "states": [
         {
-          "name": "Delhi",
-          "code": "DL",
-          "avg_cost_per_km": 0.090,
+          "name": "Kolkata",
+          "code": "KO",
+          "avg_cost_per_km": 15.02,
           "routes": [
-            {"from": "DEL", "to": "BOM", "cost_per_km": 0.093},
-            {"from": "DEL", "to": "LKO", "cost_per_km": 0.088},
-            {"from": "DEL", "to": "ATQ", "cost_per_km": 0.095},
-            {"from": "DEL", "to": "IXC", "cost_per_km": 0.085}
+            {
+              "from": "CCU",
+              "to": "AMD",
+              "cost_per_km": 7.27
+            },
+            {
+              "from": "CCU",
+              "to": "COK",
+              "cost_per_km": 7.07
+            },
+            {
+              "from": "CCU",
+              "to": "DEL",
+              "cost_per_km": 11.54
+            },
+            {
+              "from": "CCU",
+              "to": "GOI",
+              "cost_per_km": 7.55
+            },
+            {
+              "from": "CCU",
+              "to": "IXA",
+              "cost_per_km": 27.93
+            },
+            {
+              "from": "CCU",
+              "to": "IXB",
+              "cost_per_km": 39.47
+            },
+            {
+              "from": "CCU",
+              "to": "IXC",
+              "cost_per_km": 10.0
+            },
+            {
+              "from": "CCU",
+              "to": "IXE",
+              "cost_per_km": 8.99
+            },
+            {
+              "from": "CCU",
+              "to": "IXJ",
+              "cost_per_km": 15.9
+            },
+            {
+              "from": "CCU",
+              "to": "IXL",
+              "cost_per_km": 17.76
+            },
+            {
+              "from": "CCU",
+              "to": "IXM",
+              "cost_per_km": 11.76
+            }
           ]
         },
         {
-          "name": "Uttar Pradesh",
-          "code": "UP",
-          "avg_cost_per_km": 0.100,
+          "name": "Ranchi",
+          "code": "RA",
+          "avg_cost_per_km": 12.27,
           "routes": [
-            {"from": "LKO", "to": "DEL", "cost_per_km": 0.088},
-            {"from": "VNS", "to": "DEL", "cost_per_km": 0.105},
-            {"from": "LKO", "to": "BOM", "cost_per_km": 0.110}
+            {
+              "from": "IXR",
+              "to": "IXZ",
+              "cost_per_km": 12.27
+            }
           ]
         }
       ]
     },
     {
-      "name": "West India",
-      "avg_cost_per_km": 0.085,
+      "name": "North India",
+      "avg_cost_per_km": 32.72,
       "states": [
         {
-          "name": "Maharashtra",
-          "code": "MH",
-          "avg_cost_per_km": 0.080,
+          "name": "Lucknow",
+          "code": "LU",
+          "avg_cost_per_km": 32.72,
           "routes": [
-            {"from": "BOM", "to": "DEL", "cost_per_km": 0.093},
-            {"from": "BOM", "to": "PNQ", "cost_per_km": 0.120},
-            {"from": "BOM", "to": "GOI", "cost_per_km": 0.085},
-            {"from": "BOM", "to": "NAG", "cost_per_km": 0.075}
+            {
+              "from": "LKO",
+              "to": "PAT",
+              "cost_per_km": 32.72
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Other India",
+      "avg_cost_per_km": 15.86,
+      "states": [
+        {
+          "name": "Dabolim",
+          "code": "DA",
+          "avg_cost_per_km": 16.23,
+          "routes": [
+            {
+              "from": "GOI",
+              "to": "BLR",
+              "cost_per_km": 16.23
+            }
           ]
         },
         {
-          "name": "Gujarat",
-          "code": "GJ",
-          "avg_cost_per_km": 0.090,
+          "name": "New Delhi",
+          "code": "NE",
+          "avg_cost_per_km": 22.43,
           "routes": [
-            {"from": "AMD", "to": "DEL", "cost_per_km": 0.085},
-            {"from": "AMD", "to": "BOM", "cost_per_km": 0.090},
-            {"from": "AMD", "to": "BDQ", "cost_per_km": 0.110}
+            {
+              "from": "DEL",
+              "to": "AMD",
+              "cost_per_km": 14.42
+            },
+            {
+              "from": "DEL",
+              "to": "BLR",
+              "cost_per_km": 5.6
+            },
+            {
+              "from": "DEL",
+              "to": "BOM",
+              "cost_per_km": 9.96
+            },
+            {
+              "from": "DEL",
+              "to": "CCU",
+              "cost_per_km": 12.11
+            },
+            {
+              "from": "DEL",
+              "to": "COK",
+              "cost_per_km": 5.84
+            },
+            {
+              "from": "DEL",
+              "to": "GOA",
+              "cost_per_km": 47.22
+            },
+            {
+              "from": "DEL",
+              "to": "HYD",
+              "cost_per_km": 9.58
+            },
+            {
+              "from": "DEL",
+              "to": "IXA",
+              "cost_per_km": 9.95
+            },
+            {
+              "from": "DEL",
+              "to": "IXB",
+              "cost_per_km": 18.95
+            },
+            {
+              "from": "DEL",
+              "to": "IXC",
+              "cost_per_km": 69.14
+            },
+            {
+              "from": "DEL",
+              "to": "IXE",
+              "cost_per_km": 8.28
+            },
+            {
+              "from": "DEL",
+              "to": "IXJ",
+              "cost_per_km": 48.83
+            },
+            {
+              "from": "DEL",
+              "to": "IXL",
+              "cost_per_km": 37.55
+            },
+            {
+              "from": "DEL",
+              "to": "IXL",
+              "cost_per_km": 36.97
+            },
+            {
+              "from": "DEL",
+              "to": "IXM",
+              "cost_per_km": 7.93
+            },
+            {
+              "from": "DEL",
+              "to": "IXY",
+              "cost_per_km": 46.13
+            },
+            {
+              "from": "DEL",
+              "to": "IXZ",
+              "cost_per_km": 7.41
+            },
+            {
+              "from": "DEL",
+              "to": "MAA",
+              "cost_per_km": 7.96
+            }
+          ]
+        },
+        {
+          "name": "Silchar",
+          "code": "SI",
+          "avg_cost_per_km": 8.91,
+          "routes": [
+            {
+              "from": "IXS",
+              "to": "IXU",
+              "cost_per_km": 8.91
+            }
           ]
         }
       ]
     },
     {
       "name": "South India",
-      "avg_cost_per_km": 0.080,
+      "avg_cost_per_km": 18.89,
       "states": [
         {
-          "name": "Karnataka",
-          "code": "KA",
-          "avg_cost_per_km": 0.075,
+          "name": "Bangalore",
+          "code": "BA",
+          "avg_cost_per_km": 18.1,
           "routes": [
-            {"from": "BLR", "to": "DEL", "cost_per_km": 0.086},
-            {"from": "BLR", "to": "BOM", "cost_per_km": 0.085},
-            {"from": "BLR", "to": "MAA", "cost_per_km": 0.075},
-            {"from": "BLR", "to": "HYD", "cost_per_km": 0.070}
+            {
+              "from": "BLR",
+              "to": "AMD",
+              "cost_per_km": 12.91
+            },
+            {
+              "from": "BLR",
+              "to": "CCU",
+              "cost_per_km": 8.11
+            },
+            {
+              "from": "BLR",
+              "to": "COK",
+              "cost_per_km": 28.54
+            },
+            {
+              "from": "BLR",
+              "to": "DEL",
+              "cost_per_km": 5.14
+            },
+            {
+              "from": "BLR",
+              "to": "GOI",
+              "cost_per_km": 22.26
+            },
+            {
+              "from": "BLR",
+              "to": "HYD",
+              "cost_per_km": 18.31
+            },
+            {
+              "from": "BLR",
+              "to": "IXA",
+              "cost_per_km": 6.71
+            },
+            {
+              "from": "BLR",
+              "to": "IXB",
+              "cost_per_km": 10.16
+            },
+            {
+              "from": "BLR",
+              "to": "IXC",
+              "cost_per_km": 8.19
+            },
+            {
+              "from": "BLR",
+              "to": "IXE",
+              "cost_per_km": 26.98
+            },
+            {
+              "from": "BLR",
+              "to": "IXJ",
+              "cost_per_km": 15.01
+            },
+            {
+              "from": "BLR",
+              "to": "IXL",
+              "cost_per_km": 12.89
+            },
+            {
+              "from": "BLR",
+              "to": "IXM",
+              "cost_per_km": 40.94
+            },
+            {
+              "from": "BLR",
+              "to": "IXS",
+              "cost_per_km": 8.89
+            },
+            {
+              "from": "BLR",
+              "to": "IXU",
+              "cost_per_km": 24.18
+            },
+            {
+              "from": "BLR",
+              "to": "IXY",
+              "cost_per_km": 32.22
+            },
+            {
+              "from": "BLR",
+              "to": "IXZ",
+              "cost_per_km": 11.33
+            },
+            {
+              "from": "BLR",
+              "to": "IXZ",
+              "cost_per_km": 11.6
+            },
+            {
+              "from": "BLR",
+              "to": "MAA",
+              "cost_per_km": 39.53
+            }
           ]
         },
         {
-          "name": "Tamil Nadu",
-          "code": "TN",
-          "avg_cost_per_km": 0.080,
+          "name": "Chennai",
+          "code": "CH",
+          "avg_cost_per_km": 13.77,
           "routes": [
-            {"from": "MAA", "to": "BLR", "cost_per_km": 0.075},
-            {"from": "MAA", "to": "DEL", "cost_per_km": 0.090},
-            {"from": "MAA", "to": "BOM", "cost_per_km": 0.085},
-            {"from": "MAA", "to": "COK", "cost_per_km": 0.070}
+            {
+              "from": "MAA",
+              "to": "AMD",
+              "cost_per_km": 8.66
+            },
+            {
+              "from": "MAA",
+              "to": "BOM",
+              "cost_per_km": 13.31
+            },
+            {
+              "from": "MAA",
+              "to": "CCU",
+              "cost_per_km": 9.12
+            },
+            {
+              "from": "MAA",
+              "to": "COK",
+              "cost_per_km": 22.46
+            },
+            {
+              "from": "MAA",
+              "to": "GOI",
+              "cost_per_km": 15.88
+            },
+            {
+              "from": "MAA",
+              "to": "IXA",
+              "cost_per_km": 7.85
+            },
+            {
+              "from": "MAA",
+              "to": "IXB",
+              "cost_per_km": 10.83
+            },
+            {
+              "from": "MAA",
+              "to": "IXC",
+              "cost_per_km": 8.86
+            },
+            {
+              "from": "MAA",
+              "to": "IXE",
+              "cost_per_km": 23.66
+            },
+            {
+              "from": "MAA",
+              "to": "IXJ",
+              "cost_per_km": 14.14
+            },
+            {
+              "from": "MAA",
+              "to": "IXL",
+              "cost_per_km": 10.82
+            },
+            {
+              "from": "MAA",
+              "to": "IXM",
+              "cost_per_km": 22.85
+            },
+            {
+              "from": "MAA",
+              "to": "IXR",
+              "cost_per_km": 12.71
+            },
+            {
+              "from": "MAA",
+              "to": "IXS",
+              "cost_per_km": 10.04
+            },
+            {
+              "from": "MAA",
+              "to": "IXU",
+              "cost_per_km": 15.43
+            }
           ]
         },
         {
-          "name": "Kerala",
-          "code": "KL",
-          "avg_cost_per_km": 0.085,
+          "name": "Cochin",
+          "code": "CO",
+          "avg_cost_per_km": 26.58,
           "routes": [
-            {"from": "COK", "to": "DEL", "cost_per_km": 0.095},
-            {"from": "COK", "to": "BOM", "cost_per_km": 0.085},
-            {"from": "COK", "to": "MAA", "cost_per_km": 0.070},
-            {"from": "TRV", "to": "BLR", "cost_per_km": 0.080}
+            {
+              "from": "COK",
+              "to": "AMD",
+              "cost_per_km": 7.89
+            },
+            {
+              "from": "COK",
+              "to": "IXA",
+              "cost_per_km": 6.45
+            },
+            {
+              "from": "COK",
+              "to": "IXB",
+              "cost_per_km": 8.04
+            },
+            {
+              "from": "COK",
+              "to": "IXC",
+              "cost_per_km": 7.38
+            },
+            {
+              "from": "COK",
+              "to": "IXE",
+              "cost_per_km": 36.6
+            },
+            {
+              "from": "COK",
+              "to": "IXJ",
+              "cost_per_km": 9.48
+            },
+            {
+              "from": "COK",
+              "to": "IXL",
+              "cost_per_km": 11.68
+            },
+            {
+              "from": "COK",
+              "to": "IXM",
+              "cost_per_km": 125.1
+            }
           ]
         },
         {
-          "name": "Andhra Pradesh & Telangana",
-          "code": "AP_TG",
-          "avg_cost_per_km": 0.080,
+          "name": "Hyderabad",
+          "code": "HY",
+          "avg_cost_per_km": 17.13,
           "routes": [
-            {"from": "HYD", "to": "DEL", "cost_per_km": 0.090},
-            {"from": "HYD", "to": "BOM", "cost_per_km": 0.080},
-            {"from": "HYD", "to": "BLR", "cost_per_km": 0.070},
-            {"from": "HYD", "to": "MAA", "cost_per_km": 0.075}
+            {
+              "from": "HYD",
+              "to": "AMD",
+              "cost_per_km": 14.57
+            },
+            {
+              "from": "HYD",
+              "to": "BOM",
+              "cost_per_km": 20.88
+            },
+            {
+              "from": "HYD",
+              "to": "CCU",
+              "cost_per_km": 11.81
+            },
+            {
+              "from": "HYD",
+              "to": "CCU",
+              "cost_per_km": 11.28
+            },
+            {
+              "from": "HYD",
+              "to": "COK",
+              "cost_per_km": 12.65
+            },
+            {
+              "from": "HYD",
+              "to": "GOI",
+              "cost_per_km": 17.28
+            },
+            {
+              "from": "HYD",
+              "to": "IXA",
+              "cost_per_km": 8.33
+            },
+            {
+              "from": "HYD",
+              "to": "IXB",
+              "cost_per_km": 13.05
+            },
+            {
+              "from": "HYD",
+              "to": "IXC",
+              "cost_per_km": 10.28
+            },
+            {
+              "from": "HYD",
+              "to": "IXE",
+              "cost_per_km": 20.98
+            },
+            {
+              "from": "HYD",
+              "to": "IXJ",
+              "cost_per_km": 9.57
+            },
+            {
+              "from": "HYD",
+              "to": "IXL",
+              "cost_per_km": 14.43
+            },
+            {
+              "from": "HYD",
+              "to": "IXM",
+              "cost_per_km": 22.32
+            },
+            {
+              "from": "HYD",
+              "to": "IXR",
+              "cost_per_km": 14.88
+            },
+            {
+              "from": "HYD",
+              "to": "IXS",
+              "cost_per_km": 12.11
+            },
+            {
+              "from": "HYD",
+              "to": "IXU",
+              "cost_per_km": 38.77
+            },
+            {
+              "from": "HYD",
+              "to": "IXY",
+              "cost_per_km": 36.93
+            },
+            {
+              "from": "HYD",
+              "to": "IXZ",
+              "cost_per_km": 9.04
+            },
+            {
+              "from": "HYD",
+              "to": "MAA",
+              "cost_per_km": 21.16
+            },
+            {
+              "from": "HYD",
+              "to": "MAA",
+              "cost_per_km": 22.28
+            }
           ]
         }
       ]
     },
     {
-      "name": "East India",
-      "avg_cost_per_km": 0.100,
+      "name": "West India",
+      "avg_cost_per_km": 14.6,
       "states": [
         {
-          "name": "West Bengal",
-          "code": "WB",
-          "avg_cost_per_km": 0.095,
+          "name": "Ahmedabad",
+          "code": "AH",
+          "avg_cost_per_km": 12.9,
           "routes": [
-            {"from": "CCU", "to": "DEL", "cost_per_km": 0.095},
-            {"from": "CCU", "to": "BOM", "cost_per_km": 0.096},
-            {"from": "CCU", "to": "BLR", "cost_per_km": 0.090},
-            {"from": "CCU", "to": "GAU", "cost_per_km": 0.085}
+            {
+              "from": "AMD",
+              "to": "BLR",
+              "cost_per_km": 12.9
+            }
           ]
         },
         {
-          "name": "Assam",
-          "code": "AS",
-          "avg_cost_per_km": 0.105,
+          "name": "Mumbai",
+          "code": "MU",
+          "avg_cost_per_km": 24.35,
           "routes": [
-            {"from": "GAU", "to": "DEL", "cost_per_km": 0.110},
-            {"from": "GAU", "to": "CCU", "cost_per_km": 0.085},
-            {"from": "GAU", "to": "BOM", "cost_per_km": 0.115}
+            {
+              "from": "BOM",
+              "to": "AMD",
+              "cost_per_km": 30.28
+            },
+            {
+              "from": "BOM",
+              "to": "BLR",
+              "cost_per_km": 15.33
+            },
+            {
+              "from": "BOM",
+              "to": "CCU",
+              "cost_per_km": 10.55
+            },
+            {
+              "from": "BOM",
+              "to": "COK",
+              "cost_per_km": 14.44
+            },
+            {
+              "from": "BOM",
+              "to": "GOI",
+              "cost_per_km": 26.13
+            },
+            {
+              "from": "BOM",
+              "to": "HYD",
+              "cost_per_km": 17.93
+            },
+            {
+              "from": "BOM",
+              "to": "IXB",
+              "cost_per_km": 12.78
+            },
+            {
+              "from": "BOM",
+              "to": "IXC",
+              "cost_per_km": 10.16
+            },
+            {
+              "from": "BOM",
+              "to": "IXE",
+              "cost_per_km": 15.43
+            },
+            {
+              "from": "BOM",
+              "to": "IXG",
+              "cost_per_km": 18.63
+            },
+            {
+              "from": "BOM",
+              "to": "IXJ",
+              "cost_per_km": 18.08
+            },
+            {
+              "from": "BOM",
+              "to": "IXL",
+              "cost_per_km": 13.86
+            },
+            {
+              "from": "BOM",
+              "to": "IXM",
+              "cost_per_km": 19.79
+            },
+            {
+              "from": "BOM",
+              "to": "IXR",
+              "cost_per_km": 9.51
+            },
+            {
+              "from": "BOM",
+              "to": "IXS",
+              "cost_per_km": 8.07
+            },
+            {
+              "from": "BOM",
+              "to": "IXU",
+              "cost_per_km": 59.47
+            },
+            {
+              "from": "BOM",
+              "to": "IXY",
+              "cost_per_km": 26.29
+            },
+            {
+              "from": "BOM",
+              "to": "IXZ",
+              "cost_per_km": 9.48
+            },
+            {
+              "from": "BOM",
+              "to": "LKO",
+              "cost_per_km": 7.81
+            },
+            {
+              "from": "BOM",
+              "to": "MAA",
+              "cost_per_km": 11.82
+            },
+            {
+              "from": "BOM",
+              "to": "PNQ",
+              "cost_per_km": 155.43
+            }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Central India",
-      "avg_cost_per_km": 0.090,
-      "states": [
+        },
         {
-          "name": "Madhya Pradesh",
-          "code": "MP",
-          "avg_cost_per_km": 0.090,
+          "name": "Pune",
+          "code": "PU",
+          "avg_cost_per_km": 6.54,
           "routes": [
-            {"from": "BHO", "to": "DEL", "cost_per_km": 0.085},
-            {"from": "BHO", "to": "BOM", "cost_per_km": 0.090},
-            {"from": "IDR", "to": "DEL", "cost_per_km": 0.095}
+            {
+              "from": "PNQ",
+              "to": "DEL",
+              "cost_per_km": 6.54
+            }
           ]
         }
-      ]
-    },
-    {
-      "name": "International Connections",
-      "avg_cost_per_km": 0.105,
-      "routes": [
-        {"from": "DEL", "to": "DXB", "cost_per_km": 0.090},
-        {"from": "BOM", "to": "DXB", "cost_per_km": 0.085},
-        {"from": "DEL", "to": "SIN", "cost_per_km": 0.110},
-        {"from": "BOM", "to": "SIN", "cost_per_km": 0.105},
-        {"from": "DEL", "to": "LHR", "cost_per_km": 0.120},
-        {"from": "BOM", "to": "LHR", "cost_per_km": 0.115}
       ]
     }
-  ],
-  "india_avg_cost_per_km": 0.090,
-  "cheapest_region": "South India",
-  "most_expensive_region": "East India",
-  "cheapest_state": "Karnataka",
-  "most_expensive_state": "Assam"
+  ]
 }

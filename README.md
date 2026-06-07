@@ -1,161 +1,266 @@
-# Flight Cost Analysis Backend
+# Flight Cost Intelligence — Backend API
 
-A small Flask backend that provides flight-cost analysis, price-per-km comparisons and simple price-prediction utilities based on precomputed CSV / JSON dataset files. The service is intended to be used by a frontend or other services to fetch routes, compare cost-per-km, get airport lists, and retrieve simple trend / visualization data.
+Flask REST API for Indian domestic flight **cost-per-km** analysis.
 
-This README documents how the project is organized, how to run it locally and the API surface exposed by the app.
+| | |
+|---|---|
+| **Live API** | https://flight-cost-intelligence-api.onrender.com |
+| **This repo** | https://github.com/pawankushwahh/Flight_per_km_backend |
+| **Frontend** | https://pawankushwahh.github.io/Flight_per_km_cost/ |
+| **Frontend repo** | https://github.com/pawankushwahh/Flight_per_km_cost |
 
-## Key features
+This is a **standalone backend repo**. It is deployed on Render and serves the frontend on GitHub Pages.
 
-- Compare routes by cost-per-km (/api/compare)
-- Predict price/trend insights for a route (/api/predict)
-- List nearby airports for origin/destination (/api/nearby-airports)
-- Return class and layover data for a route (/api/class-layover)
-- Heatmap and visualization endpoints exposing aggregated statistics (/api/heatmap, /api/visualizations)
-- Return list of airports extracted from flight CSVs (/api/airports)
-- Raw compare data and best-route finder (/api/raw-compare-data, /api/route-find)
-- Simple Haversine-based distance calculation and CSV/JSON loading helpers
+---
 
-## Tech stack
+## About
 
-- Python 3.9 (project configured to run with Python 3.9 in render.yaml)
-- Flask (web framework)
-- flask-cors (CORS support)
-- Gunicorn + gevent for production (Procfile + gunicorn_config.py)
-- Data files are loaded from the `data/` directory (CSV and JSON)
+Exposes JSON REST endpoints for comparing Indian domestic routes by **₹ per kilometre**. Data comes from static CSV/JSON files loaded into memory at startup — no database.
 
-Dependencies are listed in `requirements.txt`.
+Current dataset: ~118 routes, 26 airports. Trend and class data are synthetic until replaced with scraped fares.
 
-## Repository layout
+---
 
-- app.py — main Flask application with all API routes
-- requirements.txt — Python dependencies
-- Procfile — process declaration (for platforms like Heroku / Render)
-- gunicorn_config.py — Gunicorn configuration used in production
-- render.yaml — configuration for Render deployments
-- data/ — directory containing CSV and JSON data files used by the API
-  - compare_data_new.csv
-  - merged_flight_data.csv
-  - compare_data.json
-  - trend_data.json
-  - nearby_airports.json
-  - class_layover_data.json
-  - heatmap_data.json
+## How it connects to the frontend
 
-## Installation
+```
+GitHub Pages (static HTML/JS)
+        │
+        ▼  fetch JSON (CORS enabled)
+This API on Render
+        │
+        ▼  read once at worker startup
+data/*.csv + data/*.json
+```
 
-1. Clone the repo:
-   git clone https://github.com/pawankushwahh/Flight_per_km_backend.git
-   cd Flight_per_km_backend
+The frontend reads `API_BASE_URL` from its own `config.js` and points to this API in production. CORS is enabled for all origins so GitHub Pages can call the API.
 
-2. Create and activate virtual environment:
-   python3 -m venv venv
-   source venv/bin/activate
+---
 
-3. Install dependencies:
-   pip install -r requirements.txt
+## Quick start (local)
 
-4. Ensure the `data/` directory contains the required CSV/JSON files used by the app. The app expects specific filenames (see "Repository layout" above).
+```bash
+git clone https://github.com/pawankushwahh/Flight_per_km_backend.git
+cd Flight_per_km_backend
+python3 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
 
-## Running
+- API: http://127.0.0.1:5000
+- Health: `GET /api/ping`
+- Data cached at startup (restart after file changes)
 
-Development:
-- Run directly with Flask (includes debug mode set in app.py):
-  python app.py
-- By default the app runs on http://127.0.0.1:5000
+To test with the UI, also clone and serve the [frontend repo](https://github.com/pawankushwahh/Flight_per_km_cost) on port 5500.
 
-Production (Gunicorn):
-- The project includes a Procfile and gunicorn_config.py. Start with:
-  gunicorn -c gunicorn_config.py app:app
-- The included gunicorn_config binds to 0.0.0.0:10000 and uses gevent workers.
+---
 
-Deploy configuration:
-- A `render.yaml` file is included and configures the service for Render. It sets Python 3.9 and runs `gunicorn -c gunicorn_config.py app:app`.
+## Documentation in this repo
 
+| File | Contents |
+|------|----------|
+| [README.md](README.md) | This file — API reference, setup, deploy |
+| [docs/DATA.md](docs/DATA.md) | Data schemas, units, feature mapping, scraping workflow |
+| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Render deploy from GitHub, post-push checklist |
+| [data/templates/](data/templates/) | CSV/JSON templates for scraper output |
 
-## Data expectations (CSV / JSON formats)
+---
 
-CSV loader (used in `app.py`) expects CSVs with header names containing at least the following for `compare_data_new.csv`:
-- Start, End, Distance, Price, CostPerKm
-All numeric fields are parsed (Distance, Price, CostPerKm) to float.
+## Deploy to Render
 
-`merged_flight_data.csv` is expected to contain airport columns used by `/api/airports`:
-- Start_IATA, Start_Airport, Start_City, Start_Lat, Start_Lon
-- End_IATA, End_Airport, End_City, End_Lat, End_Lon
+Push to this repo's `main` branch — Render auto-deploys if the service is linked.
 
-JSON files:
-- `trend_data.json` should contain route objects with `origin`, `destination`, `monthly_trends` (list of {month, avg_price}) and optional `weekly_trends`, `best_travel_month`, `best_booking_time`
-- `nearby_airports.json` should contain an `airports` array with objects having `code`, `name`, `lat`, `lon`, etc.
-- `class_layover_data.json` should have `routes` array with `origin`, `destination` and class/layover info
-- `heatmap_data.json` should contain the structure used by your frontend for heatmap visualizations
-- `compare_data.json` is a JSON representation of compare routes (used by `/api/raw-compare-data`)
+```bash
+git add .
+git commit -m "Describe your changes"
+git push origin main
+```
 
-If you add or rename files, update the filenames in `app.py` accordingly.
+Render runs `pip install -r requirements.txt` then `gunicorn -c gunicorn_config.py app:app`.
+
+| Setting | Value |
+|---------|-------|
+| Health check | `/api/ping` |
+| Port | `10000` (`gunicorn_config.py`) |
+| Config | `render.yaml` |
+
+Full guide: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+
+**After data changes:** push → wait for Render redeploy (~2–5 min) → workers reload cache.
+
+### Coordinating with the frontend repo
+
+| You changed… | Push this backend repo? | Push frontend repo? |
+|--------------|:-----------------------:|:-------------------:|
+| `app.py`, data files, `generate_data.py` | Yes | No |
+| HTML, CSS, JS only | No | Yes |
+| API + UI together | Yes (first) | Yes (after backend deploys) |
+
+---
+
+## Data files
+
+```
+data/
+├── compare_data_new.csv      ← UPDATE FIRST (canonical route prices)
+├── merged_flight_data.csv    ← UPDATE FIRST (airport coords + names)
+├── compare_data.json         ← auto-generated
+├── trend_data.json           ← auto-generated
+├── class_layover_data.json   ← auto-generated
+├── heatmap_data.json         ← auto-generated
+└── nearby_airports.json      ← auto-generated
+```
+
+### Regenerate derived JSON
+
+```bash
+python scripts/generate_data.py          # write all JSON files
+python scripts/generate_data.py --check  # coverage report only
+```
+
+### Replace dummy data with scraped data
+
+1. Update `compare_data_new.csv` and `merged_flight_data.csv`
+2. Run `python scripts/generate_data.py`
+3. Optionally overwrite JSON with real scraped trends/class/nearby data
+4. Push to GitHub → Render redeploys
+5. Run `pytest tests/ -v`
+
+See [docs/DATA.md](docs/DATA.md) for field specifications.
+
+---
 
 ## API reference
 
-All responses are JSON with a `success` boolean and either `data` or `error`.
+All responses: `{ "success": true, "data": ... }` or `{ "success": false, "error": "..." }`.
 
-1. POST /api/compare
-- Body:
-  { "routes": [ { "origin": "DEL", "destination": "BOM" }, ... ] }
-- Returns sorted routes by cost_per_km (lowest first) with structure:
-  { "origin", "destination", "distance", "price", "cost_per_km" }
+| Method | Endpoint | Data source | Frontend page |
+|--------|----------|-------------|---------------|
+| `GET` | `/` | — | — |
+| `GET` | `/api/ping` | — | All (warm-up) |
+| `GET` | `/api/airports` | `merged_flight_data.csv` | All dropdowns |
+| `POST` | `/api/compare` | `compare_data_new.csv` | Compare |
+| `POST` | `/api/predict` | `trend_data.json` | Predictor |
+| `POST` | `/api/route-find` | CSV + `trend_data.json` | Route Finder |
+| `GET` | `/api/nearby-airports` | `nearby_airports.json` | Optimizer |
+| `GET` | `/api/class-layover` | `class_layover_data.json` | Optimizer |
+| `GET` | `/api/heatmap` | `heatmap_data.json` | Heatmap |
+| `GET` | `/api/visualizations` | `compare_data_new.csv` | Visualizations, Home |
+| `GET` | `/api/raw-compare-data` | CSV + JSON merged | Home popular routes |
 
-2. POST /api/predict
-- Body:
-  { "origin": "DEL", "destination": "BOM" }
-- Returns trend/prediction data:
-  current_price, lowest_price, highest_price, price_confidence, best_time_to_book, monthly_prices, savings_percentage
+`POST /api/compare` also returns `skipped` and `not_found` arrays for invalid or missing routes.
 
-3. GET /api/nearby-airports?origin=DEL&destination=BOM
-- Returns nearby airports entries for both origin and destination (lookup by airport code)
+### Example requests
 
-4. GET /api/class-layover?origin=DEL&destination=BOM
-- Returns class and layover related information for the requested route
+```bash
+# Health
+curl https://flight-cost-intelligence-api.onrender.com/api/ping
 
-5. GET /api/heatmap
-- Returns heatmap data JSON as-is from data/heatmap_data.json
+# Compare
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"routes":[{"origin":"DEL","destination":"BOM"}]}' \
+  http://127.0.0.1:5000/api/compare
 
-6. GET /api/visualizations?limit=10
-- Returns top cheapest and most expensive routes, average cost per km, and per-origin city averages
+# Enriched routes (home page)
+curl "http://127.0.0.1:5000/api/raw-compare-data?limit=5"
 
-7. GET /api/airports
-- Extracts unique airport entries from `merged_flight_data.csv` and returns a sorted list of airports:
-  { code, name, city, country, lat, lon }
+# Predict
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"origin":"DEL","destination":"BOM"}' \
+  http://127.0.0.1:5000/api/predict
 
-8. GET /api/raw-compare-data?limit=50
-- Returns `compare_data.json` contents, optionally limited
+# Route finder
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"findBestRoutes":true,"origin":"DEL"}' \
+  http://127.0.0.1:5000/api/route-find
+```
 
-9. POST /api/route-find
-- If payload contains `findBestRoutes: true` and `origin`, filters `compare_data_new.csv` for routes from origin and enhances with trend info from trend_data.json.
-- Otherwise returns the entire compare CSV contents
+### `/api/raw-compare-data` response
 
-## Examples (curl)
+Each route merges CSV pricing with JSON coordinates:
 
-Compare:
-curl -X POST -H "Content-Type: application/json" -d '{"routes":[{"origin":"DEL","destination":"BOM"}]}' http://localhost:5000/api/compare
+```json
+{
+  "success": true,
+  "data": {
+    "routes": [{
+      "origin": "DEL",
+      "destination": "BOM",
+      "distance": 1290.5,
+      "price": 11435,
+      "cost_per_km": 8.86,
+      "origin_lat": 28.5665,
+      "origin_lon": 77.1031,
+      "destination_lat": 19.0887,
+      "destination_lon": 72.8679,
+      "airline": "IndiGo"
+    }]
+  }
+}
+```
 
-Predict:
-curl -X POST -H "Content-Type: application/json" -d '{"origin":"DEL","destination":"BOM"}' http://localhost:5000/api/predict
+---
 
-Airports:
-curl 'http://localhost:5000/api/airports'
+## Project layout
 
-## Notes, limitations and assumptions
+```
+├── app.py
+├── gunicorn_config.py
+├── Procfile
+├── render.yaml
+├── requirements.txt
+├── scripts/
+│   └── generate_data.py
+├── docs/
+│   ├── DATA.md
+│   └── DEPLOYMENT.md
+├── data/
+│   ├── *.csv / *.json
+│   └── templates/
+└── tests/
+    ├── conftest.py
+    └── test_api.py
+```
 
-- The app loads data from local files on each request (no database). For large datasets or production usage consider caching (Redis) or a proper database.
-- Some route logic assumes all airports are in India (see `/api/airports` country field).
-- Price prediction is a simple heuristic over monthly/weekly averages included in `trend_data.json`. It is not a machine-learning model.
-- The app uses CORS enabled globally.
+---
 
-## Deployment
+## Tech stack
 
-- For simple deployment, use Gunicorn as defined in the Procfile and gunicorn_config.py:
-  gunicorn -c gunicorn_config.py app:app
-- `render.yaml` is included for deploying on Render. It runs pip install -r requirements.txt then gunicorn as startCommand.
+- Python 3.9+
+- Flask + flask-cors
+- Gunicorn + gevent (production)
+- No database — in-memory cache at startup
 
-## Contributing
+---
 
-- Add or update data files inside `data/`.
-- Keep API contracts stable or document breaking changes.
-- Open issues or PRs for bugfixes and improvements.
+## Tests
+
+```bash
+pip install -r requirements.txt
+pytest tests/ -v
+```
+
+12 smoke tests cover all endpoints.
+
+---
+
+## Notes
+
+- All prices in INR (₹); `cost_per_km` in ₹/km
+- Predictor uses trend averages from `trend_data.json` — not machine learning
+- CORS enabled for all origins (required for GitHub Pages frontend)
+- Country hardcoded to `"India"` in `/api/airports`
+- Render free tier may cold-start (30–60 s on first request after idle)
+
+---
+
+## Team
+
+| Name | GitHub |
+|------|--------|
+| Pawan Kushwah | [@pawankushwahh](https://github.com/pawankushwahh) |
+| Rakshita | [@Rakshita-0206](https://github.com/Rakshita-0206) |
+| Shalini | — |
+
+Lucknow, India

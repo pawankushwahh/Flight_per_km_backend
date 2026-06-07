@@ -37,9 +37,9 @@ BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,IXS,Silchar Airpor
 BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,IXU,Aurangabad Airport,19.8627,75.3981,279.0,59.47,16592.96,Mumbai,Aurangabad
 BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,IXY,Kandla Airport,23.1127,70.1003,532.01,26.29,13985.32,Mumbai,Kandla
 BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,IXZ,Vir Savarkar International Airport,11.6412,92.7297,2282.89,9.48,21632.97,Mumbai,Port Blair
-BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,LKO,,,,1250.33,7.81,9762.24,Mumbai,
+BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,LKO,Chaudhary Charan Singh International Airport,26.7606,80.8893,1250.33,7.81,9762.24,Mumbai,Lucknow
 BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,MAA,Chennai International Airport,12.99001,80.1693,1034.13,11.82,12226.77,Mumbai,Chennai
-BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,PNQ,,,,120.0,155.43,18652.04,Mumbai,
+BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,PNQ,Pune Airport,18.5793,73.9089,120.0,155.43,18652.04,Mumbai,Pune
 CCU,Netaji Subhash Chandra Bose International Airport,22.6547,88.4467,AMD,Sardar Vallabhbhai Patel International Airport,23.0772,72.6347,1619.99,7.27,11782.02,Kolkata,Ahmedabad
 CCU,Netaji Subhash Chandra Bose International Airport,22.6547,88.4467,COK,Cochin International Airport,10.152,76.4019,1890.81,7.07,13370.24,Kolkata,Cochin
 CCU,Netaji Subhash Chandra Bose International Airport,22.6547,88.4467,DEL,Indira Gandhi International Airport,28.5665,77.1031,1300.04,11.54,15001.34,Kolkata,New Delhi
@@ -64,7 +64,7 @@ DEL,Indira Gandhi International Airport,28.5665,77.1031,BLR,Bengaluru Internatio
 DEL,Indira Gandhi International Airport,28.5665,77.1031,BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,1148.02,9.96,11439.2,New Delhi,Mumbai
 DEL,Indira Gandhi International Airport,28.5665,77.1031,CCU,Netaji Subhash Chandra Bose International Airport,22.6547,88.4467,1300.0,12.11,15737.03,New Delhi,Kolkata
 DEL,Indira Gandhi International Airport,28.5665,77.1031,COK,Cochin International Airport,10.152,76.4019,2049.06,5.84,11962.32,New Delhi,Cochin
-DEL,Indira Gandhi International Airport,28.5665,77.1031,GOA,,,,1500.01,47.22,70831.55,New Delhi,
+DEL,Indira Gandhi International Airport,28.5665,77.1031,GOA,Goa International Airport,15.3808,73.8314,1500.01,47.22,70831.55,New Delhi,Goa
 DEL,Indira Gandhi International Airport,28.5665,77.1031,HYD,Rajiv Gandhi International Airport Shamshabad,17.23132,78.42986,1268.03,9.58,12153.91,New Delhi,Hyderabad
 DEL,Indira Gandhi International Airport,28.5665,77.1031,IXA,Agartala Airport,23.887,91.2404,1502.0,9.95,14946.05,New Delhi,Agartala
 DEL,Indira Gandhi International Airport,28.5665,77.1031,IXB,Bagdogra Airport,26.6812,88.3286,1125.99,18.95,21332.05,New Delhi,Siliguri
@@ -100,7 +100,7 @@ HYD,Rajiv Gandhi International Airport Shamshabad,17.23132,78.42986,MAA,Chennai 
 HYD,Rajiv Gandhi International Airport Shamshabad,17.23132,78.42986,MAA,Chennai International Airport,12.99001,80.1693,507.01,22.28,11294.8,Hyderabad,Chennai
 IXR,Birsa Munda Airport,23.3143,85.3217,IXZ,Vir Savarkar International Airport,11.6412,92.7297,1517.01,12.27,18606.81,Ranchi,Port Blair
 IXS,Silchar Airport,24.9129,92.9787,IXU,Aurangabad Airport,19.8627,75.3981,1891.34,8.91,16857.2,Silchar,Aurangabad
-LKO,,,,PAT,,,,459.99,32.72,15051.88,,
+LKO,Chaudhary Charan Singh International Airport,26.7606,80.8893,PAT,Jay Prakash Narayan Airport,25.5913,85.0879,459.99,32.72,15051.88,Lucknow,Patna
 MAA,Chennai International Airport,12.99001,80.1693,AMD,Sardar Vallabhbhai Patel International Airport,23.0772,72.6347,1374.96,8.66,11900.36,Chennai,Ahmedabad
 MAA,Chennai International Airport,12.99001,80.1693,BOM,Chhatrapati Shivaji International Airport,19.0887,72.8679,1030.06,13.31,13713.94,Chennai,Mumbai
 MAA,Chennai International Airport,12.99001,80.1693,CCU,Netaji Subhash Chandra Bose International Airport,22.6547,88.4467,1359.98,9.12,12407.85,Chennai,Kolkata
@@ -116,4 +116,4 @@ MAA,Chennai International Airport,12.99001,80.1693,IXM,Madurai Airport,9.83451,7
 MAA,Chennai International Airport,12.99001,80.1693,IXR,Birsa Munda Airport,23.3143,85.3217,1270.95,12.71,16152.79,Chennai,Ranchi
 MAA,Chennai International Airport,12.99001,80.1693,IXS,Silchar Airport,24.9129,92.9787,1887.92,10.04,18956.44,Chennai,Silchar
 MAA,Chennai International Airport,12.99001,80.1693,IXU,Aurangabad Airport,19.8627,75.3981,918.03,15.43,14166.69,Chennai,Aurangabad
-PNQ,,,,DEL,Indira Gandhi International Airport,28.5665,77.1031,1449.88,6.54,9487.56,,New Delhi
+PNQ,Pune Airport,18.5793,73.9089,DEL,Indira Gandhi International Airport,28.5665,77.1031,1449.88,6.54,9487.56,Pune,New Delhi

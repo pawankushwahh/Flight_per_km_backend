@@ -70,6 +70,58 @@ def _safe_error(e):
         return 'An internal error occurred. Please try again.'
     return msg
 
+def _enriched_routes():
+    """Merge compare CSV metrics with JSON coords/airline into a unified route list."""
+    compare_csv = _cache.get('compare_csv', [])
+    compare_json = _cache.get('compare_json', {})
+    json_routes = {
+        (r['origin'], r['destination']): r
+        for r in compare_json.get('routes', [])
+    }
+    enriched = []
+    for row in compare_csv:
+        origin = row['Start']
+        dest = row['End']
+        extra = json_routes.get((origin, dest), {})
+        enriched.append({
+            'origin': origin,
+            'destination': dest,
+            'distance': row['Distance'],
+            'price': row['Price'],
+            'cost_per_km': row['CostPerKm'],
+            'origin_lat': extra.get('origin_lat'),
+            'origin_lon': extra.get('origin_lon'),
+            'destination_lat': extra.get('destination_lat'),
+            'destination_lon': extra.get('destination_lon'),
+            'airline': extra.get('airline', ''),
+        })
+    return enriched
+
+def _flatten_heatmap_routes():
+    """Flatten nested heatmap regions into a list the frontend can plot."""
+    heatmap = _cache.get('heatmap_json', {})
+    routes = []
+    for region in heatmap.get('regions', []):
+        for state in region.get('states', []):
+            for route in state.get('routes', []):
+                routes.append({
+                    'origin': route.get('from', route.get('origin', '')),
+                    'destination': route.get('to', route.get('destination', '')),
+                    'cost_per_km': route.get('cost_per_km', 0),
+                })
+    if routes:
+        return routes
+    return [
+        {
+            'origin': r['Start'],
+            'destination': r['End'],
+            'cost_per_km': r['CostPerKm'],
+            'price': r['Price'],
+            'distance': r['Distance'],
+        }
+        for r in _cache.get('compare_csv', [])
+    ]
+
 # ── Haversine ─────────────────────────────────────────────────
 
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -80,6 +132,10 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     return 2 * math.asin(math.sqrt(a)) * 6371
 
 # ── Health / ping ─────────────────────────────────────────────
+
+@app.route('/', methods=['GET'])
+def root():
+    return jsonify({'status': 'ok', 'service': 'flight-cost-intelligence-api'})
 
 @app.route('/api/ping', methods=['GET'])
 def ping():
@@ -104,14 +160,26 @@ def compare_routes():
 
         compare_data = _cache.get('compare_csv', [])
         results = []
+        skipped = []
+        not_found = []
 
         for route in routes:
             origin      = (route.get('origin') or '').strip().upper()
             destination = (route.get('destination') or '').strip().upper()
 
             if not _valid_iata(origin) or not _valid_iata(destination):
+                skipped.append({
+                    'origin': origin or route.get('origin', ''),
+                    'destination': destination or route.get('destination', ''),
+                    'reason': 'invalid IATA code',
+                })
                 continue
             if origin == destination:
+                skipped.append({
+                    'origin': origin,
+                    'destination': destination,
+                    'reason': 'origin and destination must differ',
+                })
                 continue
 
             row = next((r for r in compare_data
@@ -124,9 +192,16 @@ def compare_routes():
                     'price':       row['Price'],
                     'cost_per_km': row['CostPerKm'],
                 })
+            else:
+                not_found.append({'origin': origin, 'destination': destination})
 
         results.sort(key=lambda x: x['cost_per_km'])
-        return jsonify({'success': True, 'data': results})
+        return jsonify({
+            'success': True,
+            'data': results,
+            'skipped': skipped,
+            'not_found': not_found,
+        })
 
     except Exception as e:
         return jsonify({'success': False, 'error': _safe_error(e)}), 500
@@ -261,8 +336,15 @@ def class_layover():
 @app.route('/api/heatmap', methods=['GET'])
 def heatmap():
     try:
-        data = _cache.get('heatmap_json', {})
-        return jsonify({'success': True, 'data': data})
+        nested = _cache.get('heatmap_json', {})
+        flat_routes = _flatten_heatmap_routes()
+        return jsonify({
+            'success': True,
+            'data': {
+                'regions': nested.get('regions', []),
+                'routes': flat_routes,
+            },
+        })
     except Exception as e:
         return jsonify({'success': False, 'error': _safe_error(e)}), 500
 
@@ -349,15 +431,11 @@ def get_airports():
 @app.route('/api/raw-compare-data', methods=['GET'])
 def raw_compare_data():
     try:
-        limit        = request.args.get('limit', type=int)
-        compare_data = _cache.get('compare_json', {})
-
-        # Work on a shallow copy so we don't mutate the cached object
-        result = dict(compare_data)
+        limit = request.args.get('limit', type=int)
+        routes = _enriched_routes()
         if limit and limit > 0:
-            result['routes'] = compare_data.get('routes', [])[:limit]
-
-        return jsonify({'success': True, 'data': result})
+            routes = routes[:limit]
+        return jsonify({'success': True, 'data': {'routes': routes}})
 
     except Exception as e:
         return jsonify({'success': False, 'error': _safe_error(e)}), 500

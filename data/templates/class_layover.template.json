@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "origin": "DEL",
+      "destination": "BOM",
+      "distance_km": 1290.5,
+      "direct_flight": {
+        "economy":         { "price": 11435, "cost_per_km": 8.86,  "duration_hours": 1.7 },
+        "premium_economy": { "price": 17152, "cost_per_km": 13.29, "duration_hours": 1.7 },
+        "business":        { "price": 33161, "cost_per_km": 25.69, "duration_hours": 1.7 },
+        "first":           { "price": 57175, "cost_per_km": 44.32, "duration_hours": 1.7 }
+      },
+      "layover_options": [
+        {
+          "via": "JAI",
+          "economy": {
+            "price": 10520,
+            "cost_per_km": 8.08,
+            "duration_hours": 3.2,
+            "layover_hours": 1.0
+          },
+          "premium_economy": { "price": 15780, "cost_per_km": 12.12, "duration_hours": 3.2, "layover_hours": 1.0 },
+          "business":        { "price": 30508, "cost_per_km": 23.44, "duration_hours": 3.2, "layover_hours": 1.0 },
+          "first":           { "price": 52601, "cost_per_km": 40.42, "duration_hours": 3.2, "layover_hours": 1.0 }
+        }
+      ]
+    }
+  ]
+}

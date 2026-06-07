@@ -1,0 +1,24 @@
+{
+  "airports": [
+    {
+      "code": "DEL",
+      "name": "Indira Gandhi International Airport",
+      "city": "Delhi",
+      "country": "India",
+      "lat": 28.5665,
+      "lon": 77.1031,
+      "nearby": [
+        {
+          "code": "IXC",
+          "name": "Chandigarh Airport",
+          "city": "Chandigarh",
+          "country": "India",
+          "lat": 30.6735,
+          "lon": 76.7885,
+          "distance": 260,
+          "avg_cost_difference": 2.3
+        }
+      ]
+    }
+  ]
+}
